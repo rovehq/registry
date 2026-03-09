@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "issuer": "rove-security-team",
+  "last_updated": "2026-03-03T00:00:00Z",
+  "signature": "",
+  "revoked_hashes": [],
+  "revoked_versions": {
+    "fs-editor": ["0.0.1-alpha"]
+  }
+}

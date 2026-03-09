@@ -1,0 +1,84 @@
+{
+  "version": "1.0.0",
+  "issuer": "rove-team",
+  "last_updated": "2026-03-04T07:36:28Z",
+  "signature": "",
+  "core_tools": {
+    "telegram": {
+      "version": "0.1.0",
+      "platforms": {
+        "darwin-aarch64": {
+          "url": "https://registry.roveai.co/core_tools/darwin-aarch64/libtelegram.dylib",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/releases/core-tools/0.0.3/darwin-aarch64/libtelegram.dylib",
+          "sha256": "48035b5949be3b85277ff79c7b0f60cedbdd8e3534c55f44549f11cbcfa4fb5d"
+        },
+        "linux-x86_64": {
+          "url": "https://registry.roveai.co/core_tools/linux-x86_64/libtelegram.so",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/releases/core-tools/0.0.3/linux-x86_64/libtelegram.so",
+          "sha256": "e73429dc9f27479c3e400f2178995be04b00f4494be06aab00cbeebc7ac7b96f"
+        },
+        "windows-x86_64": {
+          "url": "https://registry.roveai.co/core_tools/windows-x86_64/telegram.dll",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/releases/core-tools/0.0.3/windows-x86_64/telegram.dll",
+          "sha256": "c0b0177347e32370b110fd202c435a045ba7f0de29f65f882bd746d2095d0477"
+        }
+      }
+    },
+    "ui-server": {
+      "platforms": {
+        "darwin-aarch64": {
+          "url": "https://registry.roveai.co/core_tools/darwin-aarch64/libui_server.dylib",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/releases/core-tools/0.0.3/darwin-aarch64/libui_server.dylib",
+          "sha256": "d1ad333a44161c2658c8f61d86625efeba1a7fa725261e80ab86d765dff5865c"
+        },
+        "linux-x86_64": {
+          "url": "https://registry.roveai.co/core_tools/linux-x86_64/libui_server.so",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/releases/core-tools/0.0.3/linux-x86_64/libui_server.so",
+          "sha256": "aa48bb7c13d30ffa0470a3261b3de898ccd35a7bb7be4721d1c83cf39e5fd5d8"
+        },
+        "windows-x86_64": {
+          "url": "https://registry.roveai.co/core_tools/windows-x86_64/ui_server.dll",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/releases/core-tools/0.0.3/windows-x86_64/ui_server.dll",
+          "sha256": "2a3196c289848605018c68ed0661ceb1a9b0058f0f21a68db3d7c029c85e9fba"
+        }
+      }
+    }
+  },
+  "plugins": {
+    "fs-editor": {
+      "version": "0.1.0",
+      "author": "Rove Team",
+      "trust_tier": 1,
+      "url": "https://registry.roveai.co/plugins/fs-editor/0.1.0/fs_editor.wasm",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "engines": {
+    "latest": {
+      "version": "0.0.3",
+      "url": "https://registry.roveai.co/engine/0.1.0/rove_installer.sh",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "darwin-aarch64": {
+      "version": "0.0.3",
+      "url": "https://registry.roveai.co/engine/0.0.3/rove-aarch64-apple-darwin",
+      "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/releases/engine/0.0.3/rove-aarch64-apple-darwin",
+      "sha256": "142723714e0e033c95dc0cac966fe6e29f7f62cbeba8f9f4e26e994f79e7e6ef",
+      "size_bytes": 9738080
+    },
+    "windows-x86_64": {
+      "version": "0.0.3",
+      "url": "https://registry.roveai.co/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
+      "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/releases/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
+      "sha256": "d0bd52510f2e9a6daffebd9941c2ddd4345ed5cecacda1f2767134e8003d505c",
+      "size_bytes": 13025280
+    },
+    "linux-x86_64": {
+      "version": "0.0.3",
+      "url": "https://registry.roveai.co/engine/0.0.3/rove-x86_64-unknown-linux-gnu",
+      "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/releases/engine/0.0.3/rove-x86_64-unknown-linux-gnu",
+      "sha256": "ee42dcda5d9a97298e5f5fee3ec4ba7b6e1fe0d4e831ade58e331be7a7dd7153",
+      "size_bytes": 15229256
+    }
+  }
+}

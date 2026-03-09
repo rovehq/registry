@@ -1,0 +1,213 @@
+{
+  "builds": [
+    {
+      "version": "0.0.2",
+      "commit": "a134bbb",
+      "built_at": "2026-03-03T23:52:44Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "c07e8c4ddda6aa91c1ad082d79d89291673be3d20f634542f335649da58c2a32",
+          "size_bytes": 5285232
+        },
+        "windows-x86_64": {
+          "sha256": "98668b4e7c37c55b1cbba16bd649893127ee6c857cc82a2e6fbe071b816026c4",
+          "size_bytes": 6417408
+        },
+        "linux-x86_64": {
+          "sha256": "c5fde1b92ad882784888040f840f38dd39e730030a453865ce482790f8f634b3",
+          "size_bytes": 7199496
+        }
+      }
+    },
+    {
+      "version": "0.0.2",
+      "commit": "ca67f20",
+      "built_at": "2026-03-03T23:54:13Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "c07e8c4ddda6aa91c1ad082d79d89291673be3d20f634542f335649da58c2a32",
+          "size_bytes": 5285232
+        },
+        "windows-x86_64": {
+          "sha256": "9475fd82d4e8f08c5ea204f15de1976aa92b045444971332a2eeb8e104815db5",
+          "size_bytes": 6417408
+        },
+        "linux-x86_64": {
+          "sha256": "c5fde1b92ad882784888040f840f38dd39e730030a453865ce482790f8f634b3",
+          "size_bytes": 7199496
+        }
+      }
+    },
+    {
+      "version": "0.0.2",
+      "commit": "0a8ecef",
+      "built_at": "2026-03-04T00:14:34Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "cfc2dcd1a119145235479849745b6468dd2e1537aac37a13bb1e7cf95cf09bf3",
+          "size_bytes": 5285248
+        },
+        "windows-x86_64": {
+          "sha256": "32c706f5b61132afd9e0f8f6a266332ecea19a9ef53166d534abeed71d98dcf5",
+          "size_bytes": 6418432
+        },
+        "linux-x86_64": {
+          "sha256": "0c9e44212d0710df342237430a7a5482511192869b46221c7e109b06e1a14627",
+          "size_bytes": 7201032
+        }
+      }
+    },
+    {
+      "version": "0.0.2",
+      "commit": "04d43ec",
+      "built_at": "2026-03-04T00:20:00Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "cfc2dcd1a119145235479849745b6468dd2e1537aac37a13bb1e7cf95cf09bf3",
+          "size_bytes": 5285248
+        },
+        "windows-x86_64": {
+          "sha256": "7cb91763f742b10aca5fd05fed4f5903577d31d93201be1178b8e7b033f9459e",
+          "size_bytes": 6418432
+        },
+        "linux-x86_64": {
+          "sha256": "0c9e44212d0710df342237430a7a5482511192869b46221c7e109b06e1a14627",
+          "size_bytes": 7201032
+        }
+      }
+    },
+    {
+      "version": "0.0.2",
+      "commit": "43a387d",
+      "built_at": "2026-03-04T00:34:57Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "8c9317ec76d70c02b9bf4dca0de01b9be58dc2edfec7e75872371588179f1a1f",
+          "size_bytes": 5319200
+        },
+        "windows-x86_64": {
+          "sha256": "9d354b376a5ed703bf8d14f606bced35e3fb62f187a8bbd6472578de71298099",
+          "size_bytes": 6464000
+        },
+        "linux-x86_64": {
+          "sha256": "329cbe14f6bed319c15c08b4b441195ab7fea7f0c36553729997cd4a1649040a",
+          "size_bytes": 7261736
+        }
+      }
+    },
+    {
+      "version": "0.0.2",
+      "commit": "240c8e7",
+      "built_at": "2026-03-04T00:52:51Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "27a1828dd1035dc40deca26316bde647355237dc1370d8a25c9d4e1bc9cecc84",
+          "size_bytes": 5336560
+        },
+        "windows-x86_64": {
+          "sha256": "02b62fed2d8aa9ab78baecbaedfc6e068007c1b8a2ee3f78a11c23a1bd035949",
+          "size_bytes": 6477824
+        },
+        "linux-x86_64": {
+          "sha256": "f0ad8cf137ec800d281d675a1045bc50977877c985c4f350637372ef59d09705",
+          "size_bytes": 7275784
+        }
+      }
+    },
+    {
+      "version": "0.0.2",
+      "commit": "1f9a938",
+      "built_at": "2026-03-04T01:06:45Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "27a1828dd1035dc40deca26316bde647355237dc1370d8a25c9d4e1bc9cecc84",
+          "size_bytes": 5336560
+        },
+        "windows-x86_64": {
+          "sha256": "d2fdeaa360184935e770112130963cd9ab3b0d640972b878028aec06f5c1db1e",
+          "size_bytes": 6477824
+        },
+        "linux-x86_64": {
+          "sha256": "f0ad8cf137ec800d281d675a1045bc50977877c985c4f350637372ef59d09705",
+          "size_bytes": 7275784
+        }
+      }
+    },
+    {
+      "version": "0.0.2",
+      "commit": "db163b5",
+      "built_at": "2026-03-04T01:22:42Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "362da1640d0f02fcd9a1db973b44987968f473151fbd700ff7d41bd65411758e",
+          "size_bytes": 5336560
+        },
+        "windows-x86_64": {
+          "sha256": "bc6401f5edb5490718279b3c42ab192dbafb6a0c289e372d2bbbe7341ef2afc1",
+          "size_bytes": 6477824
+        },
+        "linux-x86_64": {
+          "sha256": "86acd6e92a674654aa10d88ae7ee91f1e61664e85c75f82346448c31cca172d3",
+          "size_bytes": 7276040
+        }
+      }
+    },
+    {
+      "version": "0.0.2",
+      "commit": "b7de298",
+      "built_at": "2026-03-04T06:38:19Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "9fbc3e8e2c17ca6434e23b68ccb224af6afea38f3a47711bf7eda9ba38ebf012",
+          "size_bytes": 9721392
+        },
+        "windows-x86_64": {
+          "sha256": "5713f4fde86e0caec1adcb199dd602fd09bb1748b76999cbfde315b751486026",
+          "size_bytes": 12998144
+        },
+        "linux-x86_64": {
+          "sha256": "3851127135f191ec262df5d569b3c9e002492c9c5bfe4bd842b27687ac749367",
+          "size_bytes": 15199688
+        }
+      }
+    },
+    {
+      "version": "0.0.2",
+      "commit": "c18643f",
+      "built_at": "2026-03-04T07:35:35Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "ec464d8cb0a14a6c0e4594ccb0630245dc079aefaf6600c70d27f6da0785df33",
+          "size_bytes": 9738080
+        },
+        "windows-x86_64": {
+          "sha256": "5cf411cccf724081dcebf30db8974efbc4d726e5c46ccced9ff1dd17e5d84d44",
+          "size_bytes": 13025280
+        },
+        "linux-x86_64": {
+          "sha256": "60abdcaac6eb11ee20c39489c1d989e18fc8e9c2d64bc611d3a8fd36860a6146",
+          "size_bytes": 15230632
+        }
+      }
+    },
+    {
+      "version": "0.0.3",
+      "commit": "d4cfe51",
+      "built_at": "2026-03-04T07:36:28Z",
+      "platforms": {
+        "darwin-aarch64": {
+          "sha256": "142723714e0e033c95dc0cac966fe6e29f7f62cbeba8f9f4e26e994f79e7e6ef",
+          "size_bytes": 9738080
+        },
+        "windows-x86_64": {
+          "sha256": "d0bd52510f2e9a6daffebd9941c2ddd4345ed5cecacda1f2767134e8003d505c",
+          "size_bytes": 13025280
+        },
+        "linux-x86_64": {
+          "sha256": "ee42dcda5d9a97298e5f5fee3ec4ba7b6e1fe0d4e831ade58e331be7a7dd7153",
+          "size_bytes": 15229256
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+name: Registry — Sign & Sync Manifests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ── Validate JSON schemas ──────────────────────
+  validate:
+    name: Validate Manifests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON syntax
+        run: |
+          for f in *.json; do
+            echo "Validating $f..."
+            python3 -m json.tool "$f" > /dev/null
+            echo "✓ $f"
+          done
+
+  # ── Sign & Deploy ──────────────────────────────
+  deploy:
+    name: Sign & Deploy to R2
+    needs: [validate]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sign manifests with Ed25519
+        env:
+          ROVE_SIGNING_PRIVATE_KEY: ${{ secrets.ROVE_SIGNING_PRIVATE_KEY }}
+        run: |
+          echo "$ROVE_SIGNING_PRIVATE_KEY" > /tmp/key.pem
+
+          for manifest in manifest.json community-manifest.json revoked.json brain-manifest.json; do
+            [ ! -f "$manifest" ] && continue
+            echo "Signing $manifest..."
+
+            openssl pkeyutl -sign \
+              -inkey /tmp/key.pem \
+              -in "$manifest" \
+              -out /tmp/sig.bin \
+              -rawin 2>/dev/null || true
+
+            if [ -f /tmp/sig.bin ]; then
+              SIG=$(xxd -p /tmp/sig.bin | tr -d '\n')
+              jq --arg sig "$SIG" '.signature = $sig' "$manifest" > "/tmp/${manifest}"
+              mv "/tmp/${manifest}" "$manifest"
+              rm -f /tmp/sig.bin
+              echo "✓ $manifest signed"
+            fi
+          done
+
+          shred -u /tmp/key.pem 2>/dev/null || rm -f /tmp/key.pem
+
+      - name: Prepare R2 directory
+        run: |
+          mkdir -p .r2_upload/registry
+          cp *.json .r2_upload/registry/
+          find .r2_upload -type f | sort
+
+      - name: Deploy to Cloudflare R2
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks
+        env:
+          AWS_S3_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_REGION: "auto"
+          AWS_S3_ENDPOINT: ${{ secrets.R2_API_URL }}
+          SOURCE_DIR: ".r2_upload"

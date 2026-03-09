@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "issuer": "rove-team",
+  "last_updated": "2026-03-03T00:00:00Z",
+  "signature": "",
+  "dispatch_brains": {
+    "minilm-l6-v2": {
+      "version": "1.0.0",
+      "format": "onnx",
+      "ram_required_mb": 150,
+      "url": "https://huggingface.co/rove/minilm-l6-v2-onnx/resolve/main/model.onnx",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "reasoning_brains": {
+    "llama-3-8b-instruct": {
+      "version": "1.0.0",
+      "format": "gguf",
+      "quantization": "Q4_K_M",
+      "ram_required_mb": 4900,
+      "url": "https://huggingface.co/rove/llama-3-8b-gguf/resolve/main/model-q4.gguf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}
