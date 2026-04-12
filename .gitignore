@@ -1,6 +1,17 @@
 *.pem
 
+# Rust build outputs
+/target/
+**/target/
 
-# Added by cargo
+# Cloudflare/local env noise
+.wrangler/
+.dev.vars*
+!.dev.vars.example
+.env
+.env.local
 
-/target
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
