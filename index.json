@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "issuer": "rove-team",
+  "last_updated": "2026-04-25T00:00:00Z",
+  "channels": {
+    "stable": {
+      "engine": "stable/engine/manifest.json",
+      "core_tools": "stable/core-tools/manifest.json",
+      "plugins": "stable/plugins/manifest.json",
+      "drivers": "stable/drivers/manifest.json",
+      "brains": "stable/brains/manifest.json"
+    },
+    "dev": {
+      "engine": "dev/engine/manifest.json",
+      "core_tools": "dev/core-tools/manifest.json",
+      "plugins": "dev/plugins/manifest.json",
+      "drivers": "dev/drivers/manifest.json",
+      "brains": "dev/brains/manifest.json"
+    }
+  },
+  "revoked": "revoked.json",
+  "signature": ""
+}

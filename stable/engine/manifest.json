@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "channel": "stable",
+  "artifact": "engine",
+  "issuer": "rove-team",
+  "published_at": "2026-04-25T00:00:00Z",
+  "entries": {
+    "latest": {
+      "version": "0.0.3",
+      "platforms": {
+        "darwin-aarch64": {
+          "url": "https://registry.roveai.co/stable/engine/0.0.3/rove-aarch64-apple-darwin",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/engine/0.0.3/rove-aarch64-apple-darwin",
+          "blake3": "142723714e0e033c95dc0cac966fe6e29f7f62cbeba8f9f4e26e994f79e7e6ef",
+          "size_bytes": 9738080
+        },
+        "darwin-x86_64": {
+          "url": "https://registry.roveai.co/stable/engine/0.0.3/rove-x86_64-apple-darwin",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/engine/0.0.3/rove-x86_64-apple-darwin",
+          "blake3": "",
+          "size_bytes": 0
+        },
+        "linux-x86_64": {
+          "url": "https://registry.roveai.co/stable/engine/0.0.3/rove-x86_64-unknown-linux-gnu",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/engine/0.0.3/rove-x86_64-unknown-linux-gnu",
+          "blake3": "ee42dcda5d9a97298e5f5fee3ec4ba7b6e1fe0d4e831ade58e331be7a7dd7153",
+          "size_bytes": 15229256
+        },
+        "linux-aarch64": {
+          "url": "https://registry.roveai.co/stable/engine/0.0.3/rove-aarch64-unknown-linux-gnu",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/engine/0.0.3/rove-aarch64-unknown-linux-gnu",
+          "blake3": "",
+          "size_bytes": 0
+        },
+        "windows-x86_64": {
+          "url": "https://registry.roveai.co/stable/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
+          "blake3": "d0bd52510f2e9a6daffebd9941c2ddd4345ed5cecacda1f2767134e8003d505c",
+          "size_bytes": 13025280
+        }
+      }
+    }
+  },
+  "signature": ""
+}

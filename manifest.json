@@ -53,6 +53,16 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   },
+  "drivers": {
+    "browser-cdp": {
+      "version": "0.1.0",
+      "plugin_type": "Workspace",
+      "trust_tier": 0,
+      "description": "Chrome CDP browser backend for Rove. Official privileged browser driver.",
+      "manifest_path": "plugins/browser-cdp/manifest.json",
+      "runtime_config_path": "plugins/browser-cdp/runtime.json"
+    }
+  },
   "engines": {
     "latest": {
       "version": "0.0.3",

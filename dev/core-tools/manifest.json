@@ -1,0 +1,10 @@
+{
+  "schema_version": 2,
+  "channel": "dev",
+  "artifact": "core-tools",
+  "issuer": "rove-team",
+  "published_at": "2026-04-25T00:00:00Z",
+  "min_engine": "0.0.4-dev",
+  "entries": {},
+  "signature": ""
+}

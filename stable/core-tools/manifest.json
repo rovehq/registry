@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "channel": "stable",
+  "artifact": "core-tools",
+  "issuer": "rove-team",
+  "published_at": "2026-04-25T00:00:00Z",
+  "min_engine": "0.0.3",
+  "entries": {
+    "telegram": {
+      "version": "0.1.0",
+      "trust_tier": 0,
+      "description": "First-party Telegram channel backend",
+      "platforms": {
+        "darwin-aarch64": {
+          "url": "https://registry.roveai.co/stable/core-tools/0.1.0/darwin-aarch64/libtelegram.dylib",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/core-tools/0.1.0/darwin-aarch64/libtelegram.dylib",
+          "blake3": "48035b5949be3b85277ff79c7b0f60cedbdd8e3534c55f44549f11cbcfa4fb5d",
+          "size_bytes": 0
+        },
+        "linux-x86_64": {
+          "url": "https://registry.roveai.co/stable/core-tools/0.1.0/linux-x86_64/libtelegram.so",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/core-tools/0.1.0/linux-x86_64/libtelegram.so",
+          "blake3": "e73429dc9f27479c3e400f2178995be04b00f4494be06aab00cbeebc7ac7b96f",
+          "size_bytes": 0
+        },
+        "windows-x86_64": {
+          "url": "https://registry.roveai.co/stable/core-tools/0.1.0/windows-x86_64/telegram.dll",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/core-tools/0.1.0/windows-x86_64/telegram.dll",
+          "blake3": "c0b0177347e32370b110fd202c435a045ba7f0de29f65f882bd746d2095d0477",
+          "size_bytes": 0
+        }
+      }
+    },
+    "ui-server": {
+      "version": "0.1.0",
+      "trust_tier": 0,
+      "description": "First-party WebUI server backend",
+      "platforms": {
+        "darwin-aarch64": {
+          "url": "https://registry.roveai.co/stable/core-tools/0.1.0/darwin-aarch64/libui_server.dylib",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/core-tools/0.1.0/darwin-aarch64/libui_server.dylib",
+          "blake3": "d1ad333a44161c2658c8f61d86625efeba1a7fa725261e80ab86d765dff5865c",
+          "size_bytes": 0
+        },
+        "linux-x86_64": {
+          "url": "https://registry.roveai.co/stable/core-tools/0.1.0/linux-x86_64/libui_server.so",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/core-tools/0.1.0/linux-x86_64/libui_server.so",
+          "blake3": "aa48bb7c13d30ffa0470a3261b3de898ccd35a7bb7be4721d1c83cf39e5fd5d8",
+          "size_bytes": 0
+        },
+        "windows-x86_64": {
+          "url": "https://registry.roveai.co/stable/core-tools/0.1.0/windows-x86_64/ui_server.dll",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/core-tools/0.1.0/windows-x86_64/ui_server.dll",
+          "blake3": "2a3196c289848605018c68ed0661ceb1a9b0058f0f21a68db3d7c029c85e9fba",
+          "size_bytes": 0
+        }
+      }
+    }
+  },
+  "signature": ""
+}

@@ -7,22 +7,31 @@ on:
     branches: [main]
 
 jobs:
-  # ── Validate JSON schemas ──────────────────────
+  # ── Validate JSON syntax ────────────────────────
   validate:
     name: Validate Manifests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validate JSON syntax
+      - name: Validate per-channel manifests
         run: |
-          for f in *.json; do
+          shopt -s nullglob
+          fail=0
+          # New schema_version=2 layout: {channel}/{artifact}/manifest.json
+          for f in stable/*/manifest.json dev/*/manifest.json index.json revoked.json; do
+            [ ! -f "$f" ] && continue
             echo "Validating $f..."
-            python3 -m json.tool "$f" > /dev/null
-            echo "✓ $f"
+            if ! python3 -m json.tool "$f" > /dev/null; then
+              echo "✗ $f invalid"
+              fail=1
+            else
+              echo "✓ $f"
+            fi
           done
+          exit $fail
 
-  # ── Sign & Deploy ──────────────────────────────
+  # ── Sign & Deploy ───────────────────────────────
   deploy:
     name: Sign & Deploy to R2
     needs: [validate]
@@ -30,38 +39,89 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Sign manifests with Ed25519
+      # Each manifest carries `trust_tier` (for per-entry artifacts like plugins)
+      # or implicit artifact role (engine/core-tools/drivers/brains = official).
+      # Manifests under `<channel>/community/` are signed with COMMUNITY key.
+      # Everything else → OFFICIAL key.
+      - name: Sign manifests
         env:
-          ROVE_SIGNING_PRIVATE_KEY: ${{ secrets.ROVE_SIGNING_PRIVATE_KEY }}
+          OFFICIAL_PRIV: ${{ secrets.ROVE_TEAM_OFFICIAL_PRIVATE_KEY }}
+          COMMUNITY_PRIV: ${{ secrets.ROVE_TEAM_COMMUNITY_PRIVATE_KEY }}
         run: |
-          echo "$ROVE_SIGNING_PRIVATE_KEY" > /tmp/key.pem
+          set -e
+          shopt -s nullglob
+          echo "$OFFICIAL_PRIV"  > /tmp/official.pem
+          echo "$COMMUNITY_PRIV" > /tmp/community.pem
 
-          for manifest in manifest.json community-manifest.json revoked.json brain-manifest.json; do
-            [ ! -f "$manifest" ] && continue
-            echo "Signing $manifest..."
+          sign_with() {
+            local key_file="$1"
+            local manifest="$2"
 
-            openssl pkeyutl -sign \
-              -inkey /tmp/key.pem \
-              -in "$manifest" \
-              -out /tmp/sig.bin \
-              -rawin 2>/dev/null || true
+            # Canonicalize: strip signature/signed_at, compact, sorted keys —
+            # must match canonicalize_manifest() in engine crypto/mod.rs.
+            CANON=$(jq -cS 'del(.signature) | del(.signed_at)' "$manifest")
+            echo -n "$CANON" > /tmp/canon.bin
 
-            if [ -f /tmp/sig.bin ]; then
-              SIG=$(xxd -p /tmp/sig.bin | tr -d '\n')
-              jq --arg sig "$SIG" '.signature = $sig' "$manifest" > "/tmp/${manifest}"
-              mv "/tmp/${manifest}" "$manifest"
-              rm -f /tmp/sig.bin
-              echo "✓ $manifest signed"
-            fi
+            openssl pkeyutl -sign -rawin \
+              -inkey "$key_file" \
+              -in /tmp/canon.bin \
+              -out /tmp/sig.bin
+
+            SIG=$(xxd -p /tmp/sig.bin | tr -d '\n')
+            jq --arg sig "$SIG" '.signature = $sig' "$manifest" > /tmp/m.json
+            mv /tmp/m.json "$manifest"
+            # Also write .sig sidecar alongside the manifest
+            echo -n "ed25519:$SIG" > "${manifest%.json}.sig"
+            rm -f /tmp/sig.bin /tmp/canon.bin
+          }
+
+          # OFFICIAL: engine, core-tools, drivers, brains, plugins (official tier),
+          # revoked.json, index.json
+          for channel in stable dev; do
+            for artifact in engine core-tools drivers brains plugins; do
+              m="${channel}/${artifact}/manifest.json"
+              [ -f "$m" ] && { echo "Signing [official] $m"; sign_with /tmp/official.pem "$m"; }
+            done
+          done
+          for m in revoked.json index.json; do
+            [ -f "$m" ] && { echo "Signing [official] $m"; sign_with /tmp/official.pem "$m"; }
           done
 
-          shred -u /tmp/key.pem 2>/dev/null || rm -f /tmp/key.pem
+          # COMMUNITY: <channel>/community/... — includes top-level community
+          # index and per-plugin manifests.
+          for m in stable/community/manifest.json dev/community/manifest.json; do
+            [ -f "$m" ] && { echo "Signing [community] $m"; sign_with /tmp/community.pem "$m"; }
+          done
+          for m in stable/community/**/manifest.json dev/community/**/manifest.json; do
+            [ -f "$m" ] && { echo "Signing [community] $m"; sign_with /tmp/community.pem "$m"; }
+          done
+
+          shred -u /tmp/official.pem /tmp/community.pem 2>/dev/null || \
+            rm -f /tmp/official.pem /tmp/community.pem
+
+      - name: Commit signatures
+        run: |
+          git config user.name "rove-ci"
+          git config user.email "ci@roveai.co"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No signature updates."
+          else
+            git commit -m "sign: refresh per-channel manifest signatures"
+            git push
+          fi
 
       - name: Prepare R2 directory
         run: |
-          mkdir -p .r2_upload/registry
-          cp *.json .r2_upload/registry/
+          mkdir -p .r2_upload
+          # Ship full per-channel tree at R2 root so clients fetch
+          # {base}/{channel}/{artifact}/manifest.json + .sig
+          for p in stable dev index.json revoked.json; do
+            [ -e "$p" ] && cp -r "$p" .r2_upload/
+          done
           find .r2_upload -type f | sort
 
       - name: Deploy to Cloudflare R2

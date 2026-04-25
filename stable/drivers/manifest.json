@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "channel": "stable",
+  "artifact": "drivers",
+  "issuer": "rove-team",
+  "published_at": "2026-04-25T00:00:00Z",
+  "min_engine": "0.0.3",
+  "entries": {
+    "browser-cdp": {
+      "version": "0.1.0",
+      "plugin_type": "Workspace",
+      "trust_tier": 0,
+      "description": "Chrome CDP browser backend. Official privileged browser driver.",
+      "manifest_path": "plugins/browser-cdp/manifest.json",
+      "runtime_config_path": "plugins/browser-cdp/runtime.json"
+    }
+  },
+  "signature": ""
+}

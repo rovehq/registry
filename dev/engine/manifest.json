@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "channel": "dev",
+  "artifact": "engine",
+  "issuer": "rove-team",
+  "published_at": "2026-04-25T00:00:00Z",
+  "entries": {
+    "latest": {
+      "version": "0.0.4-dev",
+      "platforms": {
+        "darwin-aarch64": {
+          "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-aarch64-apple-darwin",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/dev/engine/0.0.4-dev/rove-aarch64-apple-darwin",
+          "blake3": "",
+          "size_bytes": 0
+        },
+        "darwin-x86_64": {
+          "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-x86_64-apple-darwin",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/dev/engine/0.0.4-dev/rove-x86_64-apple-darwin",
+          "blake3": "",
+          "size_bytes": 0
+        },
+        "linux-x86_64": {
+          "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-x86_64-unknown-linux-gnu",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/dev/engine/0.0.4-dev/rove-x86_64-unknown-linux-gnu",
+          "blake3": "",
+          "size_bytes": 0
+        },
+        "linux-aarch64": {
+          "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-aarch64-unknown-linux-gnu",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/dev/engine/0.0.4-dev/rove-aarch64-unknown-linux-gnu",
+          "blake3": "",
+          "size_bytes": 0
+        },
+        "windows-x86_64": {
+          "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-x86_64-pc-windows-msvc.exe",
+          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/dev/engine/0.0.4-dev/rove-x86_64-pc-windows-msvc.exe",
+          "blake3": "",
+          "size_bytes": 0
+        }
+      }
+    }
+  },
+  "signature": ""
+}

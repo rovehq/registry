@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "channel": "stable",
+  "artifact": "plugins",
+  "issuer": "rove-team",
+  "published_at": "2026-04-25T00:00:00Z",
+  "min_engine": "0.0.3",
+  "entries": {
+    "fs-editor": {
+      "version": "0.1.0",
+      "author": "Rove Team",
+      "trust_tier": 1,
+      "format": "wasm",
+      "url": "https://registry.roveai.co/stable/plugins/fs-editor/0.1.0/fs_editor.wasm",
+      "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/stable/plugins/fs-editor/0.1.0/fs_editor.wasm",
+      "blake3": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    }
+  },
+  "signature": ""
+}
