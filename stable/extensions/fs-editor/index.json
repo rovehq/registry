@@ -1,0 +1,28 @@
+{
+  "schema_version": "1",
+  "generated_at": 1777396724,
+  "plugin": {
+    "id": "fs-editor",
+    "name": "fs-editor",
+    "plugin_type": "Workspace",
+    "trust_tier": "Official",
+    "latest_version": "1.0.0",
+    "index_path": "fs-editor/index.json"
+  },
+  "versions": [
+    {
+      "version": "1.0.0",
+      "published_at": 1777396724,
+      "bundle_path": "fs-editor/1.0.0",
+      "manifest_path": "fs-editor/1.0.0/manifest.json",
+      "package_path": "fs-editor/1.0.0/plugin-package.json",
+      "runtime_path": null,
+      "artifact_path": "fs-editor/1.0.0/fs_editor.wasm",
+      "artifact_sidecar_path": null,
+      "readme_path": null,
+      "release_path": "fs-editor/1.0.0/release.json"
+    }
+  ],
+  "signed_at": 1777396724,
+  "signature": "660f25a1dff5a98605a679df3daf3df317608fff4039b9b5aec7b96f99af66d2d17ef63f60c646a0335c24dc5b695ab0cc5ac020cb4002401626f823d065d30b"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "fs-editor",
+  "artifact": "fs_editor.wasm",
+  "runtime_config": "",
+  "payload_hash": "dee41baf70601a0753808314ef28fcd4a6fb3c60c9811f707c1cca769c2c40e2",
+  "payload_signature": "a9fc978e77537b36e7d6097e75554c9b727dab2867d637244785b90f556bb2f75efd30a00dd4a1ae144ed4277e10932165a10d6b4af01ea4f83bb9cbff220302",
+  "enabled": true
+}
