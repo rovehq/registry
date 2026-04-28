@@ -1,0 +1,12 @@
+{
+  "id": "fs-editor",
+  "name": "fs-editor",
+  "version": "1.0.0",
+  "plugin_type": "Workspace",
+  "trust_tier": "Official",
+  "generated_at": 1777396382,
+  "artifact": "fs_editor.wasm",
+  "runtime_config": "",
+  "signed_at": 1777396382,
+  "signature": "dbfdf0a5bb8f817dcac3c76b6eba3afdd8d35af188342fc5f17f117317510266d5edd0a1839ba7ba92cbe2ba3fc59898a61e3cf35e9c134619d827d0d8c7ad01"
+}

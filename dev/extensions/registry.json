@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "generated_at": 1777396382,
+  "plugins": [
+    {
+      "id": "fs-editor",
+      "name": "fs-editor",
+      "plugin_type": "Workspace",
+      "trust_tier": "Official",
+      "latest_version": "1.0.0",
+      "index_path": "fs-editor/index.json"
+    }
+  ],
+  "signed_at": 1777396382,
+  "signature": "a3794799e8f28b1607007bfbbdd42672ba7a872186c7597aa524ff9645947054b7dbf62a92e376ff4bbb4901223438bb4fb314718405fbed25eca835ed111f0e"
+}
