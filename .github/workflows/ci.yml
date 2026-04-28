@@ -41,7 +41,10 @@ jobs:
   deploy:
     name: Sign & Deploy to R2
     needs: [validate]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: |
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      github.event_name == 'schedule' ||
+      github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -135,7 +138,7 @@ jobs:
         with:
           args: --acl public-read --follow-symlinks
         env:
-          AWS_S3_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+          AWS_S3_BUCKET: ${{ secrets.REGISTRY_R2_BUCKET_NAME }}
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           AWS_REGION: "auto"
