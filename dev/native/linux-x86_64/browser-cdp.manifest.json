@@ -1,0 +1,16 @@
+{
+  "name": "browser-cdp",
+  "version": "0.1.0",
+  "sdk_version": "0.1.0",
+  "plugin_type": "Plugin",
+  "permissions": {
+    "filesystem": [],
+    "network": ["*"],
+    "memory_read": false,
+    "memory_write": false,
+    "tools": []
+  },
+  "trust_tier": "Official",
+  "min_model": null,
+  "description": "Chrome CDP browser backend for Rove. Provides browse_url, read_page_text, click_element, and fill_form_field via the Chrome DevTools Protocol. Requires Chrome or Chromium installed on the host."
+}
