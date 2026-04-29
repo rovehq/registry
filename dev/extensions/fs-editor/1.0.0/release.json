@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "plugin_type": "Workspace",
   "trust_tier": "Official",
-  "generated_at": 1777416311,
+  "generated_at": 1777432228,
   "artifact": "fs_editor.wasm",
   "runtime_config": "",
-  "signed_at": 1777416311,
-  "signature": "dc3c1f47a25f0cd7e5f3089467bb4894d08b9c0f431a935ff9dc3f6b01524097878e652c5b7379a39bb9c36a4f8a17e4925578c8160d61b6df750d71ba96190d"
+  "signed_at": 1777432228,
+  "signature": "c9afeabefc82319a51baac4299bb196ae7ff2cb624f62ae8bd15c9996c41b1d3749940e583c39421fcf94ec98cf35e66e3ad542106d2986085c7194043ccf60e"
 }
