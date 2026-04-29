@@ -2,12 +2,16 @@
   "id": "fs-editor",
   "name": "File System Editor",
   "version": "1.0.0",
+  "sdk_version": "0.1.0",
   "description": "Read, write, and delete files inside the Rove workspace.",
   "author": "Rove Team",
-  "plugin_type": "Workspace",
+  "plugin_type": "Plugin",
   "trust_tier": "Official",
   "permissions": {
-    "filesystem": ["read", "write"],
+    "filesystem": [
+      "read",
+      "write"
+    ],
     "network": [],
     "memory_read": false,
     "memory_write": false,
@@ -39,5 +43,7 @@
       },
       "risk_tier": 2
     }
-  ]
+  ],
+  "signed_at": 1777435524,
+  "signature": "767d18e1dc65d8f04694e5aae4f92de5cb22cdd4d7fdbe7c5efc76ffff53949b30d8b30ad4b1216dbb7833787ae7eeb1c0fcf02e54188223930df182d4564500"
 }

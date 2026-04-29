@@ -2,11 +2,11 @@
   "id": "fs-editor",
   "name": "fs-editor",
   "version": "1.0.0",
-  "plugin_type": "Workspace",
+  "plugin_type": "Plugin",
   "trust_tier": "Official",
-  "generated_at": 1777432228,
+  "generated_at": 1777435524,
   "artifact": "fs_editor.wasm",
-  "runtime_config": "",
-  "signed_at": 1777432228,
-  "signature": "c9afeabefc82319a51baac4299bb196ae7ff2cb624f62ae8bd15c9996c41b1d3749940e583c39421fcf94ec98cf35e66e3ad542106d2986085c7194043ccf60e"
+  "runtime_config": "runtime.json",
+  "signed_at": 1777435524,
+  "signature": "96b36a43210ecd6581154893d3f10ec4b296ddc7128cfc9dd20023bf4480aad1c02c5aa934295b81f6aef41580cc8b6e59ec3d03e2c8ee6e150840cd988b8b08"
 }
