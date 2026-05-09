@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "generated_at": 1778280222,
+  "generated_at": 1778365890,
   "plugins": [
     {
       "id": "fs-editor",
@@ -11,6 +11,6 @@
       "index_path": "fs-editor/index.json"
     }
   ],
-  "signed_at": 1778280222,
-  "signature": "d88fe36d6d231a53fa7af029768850d5fc0fc344d0d79af7a687eef64ad4a66340a78556cee0c45d5a98d0e153eb9a93c903327b1dc760366799ce35e86eb604"
+  "signed_at": 1778365890,
+  "signature": "4a5875075f8648050c5a724e44308aecf9f438d7f3560ac46853d1a4b453e6a12888316debd6d031c7104f87c475724aab550dac2b45907c2589c516bdebd50f"
 }
