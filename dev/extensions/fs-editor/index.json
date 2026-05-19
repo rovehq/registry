@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "generated_at": 1779144484,
+  "generated_at": 1779231496,
   "plugin": {
     "id": "fs-editor",
     "name": "fs-editor",
@@ -12,7 +12,7 @@
   "versions": [
     {
       "version": "1.0.0",
-      "published_at": 1779144484,
+      "published_at": 1779231496,
       "bundle_path": "fs-editor/1.0.0",
       "manifest_path": "fs-editor/1.0.0/manifest.json",
       "package_path": "fs-editor/1.0.0/plugin-package.json",
@@ -23,6 +23,6 @@
       "release_path": "fs-editor/1.0.0/release.json"
     }
   ],
-  "signed_at": 1779144484,
-  "signature": "879cb941600b470be373dfb2ec2b1e851d416d495a5accf3180c89759116b514c43745a6e43d97ca8c08e797ec554c3ffa5ff8343c45d4edaccabd6a7d1e1b04"
+  "signed_at": 1779231496,
+  "signature": "26375e2cdbbade206173db1354b7b401fd6b5a29173af8d58e2f2e6c5a45255cbf14847aa58d70604b006d7a1df6eb8ebd135feebf63ca96c8fca9291b774205"
 }
