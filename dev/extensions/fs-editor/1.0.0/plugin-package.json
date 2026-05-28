@@ -2,7 +2,7 @@
   "id": "fs-editor",
   "artifact": "fs_editor.wasm",
   "runtime_config": "runtime.json",
-  "payload_hash": "4f09a1d0aeabc8fc392788dfe7a20b7861ff14077b1e6a132ab35927b277630d",
-  "payload_signature": "07e92736ee4e79580302fd10972eae30faf0c30386e3382e2979e2dba41de86bebda6c30043ef9b58b5651cdc453aa0cc76c47a541fb7e8bae321584cb9df701",
+  "payload_hash": "4e498f32b688695b20338706d535d18d15eaea6c7bed7f78d1971d0e3ed0b2e6",
+  "payload_signature": "7d5dfd24e151c9c03d17b65f5bda2c0a283141086421010521b86bc0abf3f4211f02a6c5987e85cc4b39febbd8be2e1019d1615be5666d12574ed8ef49ae2903",
   "enabled": true
 }
