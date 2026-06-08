@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "plugin_type": "Plugin",
   "trust_tier": "Official",
-  "generated_at": 1780872793,
+  "generated_at": 1780959982,
   "artifact": "fs_editor.wasm",
   "runtime_config": "runtime.json",
-  "signed_at": 1780872793,
-  "signature": "9475d7ff96bbe9caee0756994528505077b9be1ff837a90ccb6abacc7de076cb662429b80a85af66d22ed3a7194c0c26c4002694a10b4435c6fcce44df7b920e"
+  "signed_at": 1780959982,
+  "signature": "e50e8125991c31c73c659f21d5f32b2672d9dbf6e7b41067fce40f37f3c17cbfa351e0bb5c2e087d420f5d8079eac415b6b10739ff78da07397617aad460e80e"
 }
