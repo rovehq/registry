@@ -3,16 +3,16 @@
   "channel": "dev",
   "artifact": "engine",
   "issuer": "rove-team",
-  "published_at": "2026-04-25T00:00:00Z",
+  "published_at": "2026-06-11T09:08:01Z",
   "entries": {
     "latest": {
-      "version": "0.0.4-dev",
+      "version": "0.0.3",
       "platforms": {
         "darwin-aarch64": {
-          "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-aarch64-apple-darwin",
-          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/dev/engine/0.0.4-dev/rove-aarch64-apple-darwin",
-          "blake3": "",
-          "size_bytes": 0
+          "url": "https://registry.roveai.co/dev/engine/0.0.3/rove-aarch64-apple-darwin",
+          "fallback_url": "https://raw.githubusercontent.com/rovehq/registry/main/dev/engine/0.0.3/rove-aarch64-apple-darwin",
+          "blake3": "fcf180f5c9f7c79984cf64b88fbe312ab913094d798f00cc43cb85f8385dadfd",
+          "size_bytes": 35037920
         },
         "darwin-x86_64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-x86_64-apple-darwin",
@@ -21,10 +21,10 @@
           "size_bytes": 0
         },
         "linux-x86_64": {
-          "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-x86_64-unknown-linux-gnu",
-          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/dev/engine/0.0.4-dev/rove-x86_64-unknown-linux-gnu",
-          "blake3": "",
-          "size_bytes": 0
+          "url": "https://registry.roveai.co/dev/engine/0.0.3/rove-x86_64-unknown-linux-gnu",
+          "fallback_url": "https://raw.githubusercontent.com/rovehq/registry/main/dev/engine/0.0.3/rove-x86_64-unknown-linux-gnu",
+          "blake3": "3a3dec772c7b275eacddab1e7b7268b6053ff6533d32a26b8df8d97557bc0348",
+          "size_bytes": 51115352
         },
         "linux-aarch64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-aarch64-unknown-linux-gnu",
@@ -33,10 +33,10 @@
           "size_bytes": 0
         },
         "windows-x86_64": {
-          "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-x86_64-pc-windows-msvc.exe",
-          "fallback_url": "https://raw.githubusercontent.com/orvislab/rove-registry/main/dev/engine/0.0.4-dev/rove-x86_64-pc-windows-msvc.exe",
-          "blake3": "",
-          "size_bytes": 0
+          "url": "https://registry.roveai.co/dev/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
+          "fallback_url": "https://raw.githubusercontent.com/rovehq/registry/main/dev/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
+          "blake3": "5eb9b441a18c67634e49d657e4adcf7b62f99f738887c608ad9b60ad7d7c8980",
+          "size_bytes": 45764096
         }
       }
     }
