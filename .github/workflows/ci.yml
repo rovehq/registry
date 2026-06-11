@@ -50,6 +50,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.REGISTRY_PAT }}
 
       # Each manifest carries `trust_tier` (for per-entry artifacts like plugins)
       # or implicit artifact role (engine/core-tools/drivers/brains = official).
