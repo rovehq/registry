@@ -66,29 +66,29 @@ jobs:
           echo "$COMMUNITY_PRIV" > /tmp/community_raw
 
           cat << 'EOF' > /tmp/fix_pem.py
-import sys, base64, os
-PKCS8_PREFIX = bytes.fromhex("302e020100300506032b657004220420")
-for name in ["official", "community"]:
-    raw = open(f"/tmp/{name}_raw").read().strip()
-    if not raw: continue
-    if raw.startswith("-----BEGIN"):
-        open(f"/tmp/{name}.pem", "w").write(raw + "\n")
-        continue
-    try:
-        b = bytes.fromhex(raw)
-    except ValueError:
-        try:
-            b = base64.b64decode(raw)
-        except Exception:
-            sys.exit(f"Invalid key format for {name}")
-    if len(b) == 48 and b[:16] == PKCS8_PREFIX:
-        b = b[16:]
-    elif len(b) != 32:
-        sys.exit(f"Key seed must be 32 bytes for {name}, got {len(b)}")
-    der = PKCS8_PREFIX + b
-    pem = "-----BEGIN PRIVATE KEY-----\n" + base64.encodebytes(der).decode() + "-----END PRIVATE KEY-----\n"
-    open(f"/tmp/{name}.pem", "w").write(pem)
-EOF
+          import sys, base64, os
+          PKCS8_PREFIX = bytes.fromhex("302e020100300506032b657004220420")
+          for name in ["official", "community"]:
+              raw = open(f"/tmp/{name}_raw").read().strip()
+              if not raw: continue
+              if raw.startswith("-----BEGIN"):
+                  open(f"/tmp/{name}.pem", "w").write(raw + "\n")
+                  continue
+              try:
+                  b = bytes.fromhex(raw)
+              except ValueError:
+                  try:
+                      b = base64.b64decode(raw)
+                  except Exception:
+                      sys.exit(f"Invalid key format for {name}")
+              if len(b) == 48 and b[:16] == PKCS8_PREFIX:
+                  b = b[16:]
+              elif len(b) != 32:
+                  sys.exit(f"Key seed must be 32 bytes for {name}, got {len(b)}")
+              der = PKCS8_PREFIX + b
+              pem = "-----BEGIN PRIVATE KEY-----\n" + base64.encodebytes(der).decode() + "-----END PRIVATE KEY-----\n"
+              open(f"/tmp/{name}.pem", "w").write(pem)
+          EOF
           python3 /tmp/fix_pem.py
 
           sign_with() {
