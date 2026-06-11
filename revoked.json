@@ -2,9 +2,11 @@
   "version": "1.0.0",
   "issuer": "rove-security-team",
   "last_updated": "2026-03-03T00:00:00Z",
-  "signature": "",
+  "signature": "1120c9ae4994ce6e6a35fdc89348363799fe64ba556ac2044da6222bf900f54091a8c0694d812915a3e7fe0c9066c81f6d4a10ca37ef8ea425154388bfcceb0b",
   "revoked_hashes": [],
   "revoked_versions": {
-    "fs-editor": ["0.0.1-alpha"]
+    "fs-editor": [
+      "0.0.1-alpha"
+    ]
   }
 }
