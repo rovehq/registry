@@ -3,7 +3,7 @@
   "channel": "dev",
   "artifact": "engine",
   "issuer": "rove-team",
-  "published_at": "2026-06-29T23:12:49Z",
+  "published_at": "2026-06-30T23:37:07Z",
   "entries": {
     "latest": {
       "version": "0.0.3",
@@ -11,8 +11,8 @@
         "darwin-aarch64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.3/rove-aarch64-apple-darwin",
           "fallback_url": "https://raw.githubusercontent.com/rovehq/registry/main/dev/engine/0.0.3/rove-aarch64-apple-darwin",
-          "blake3": "ca41a3677ab11d1cf21590a72c3adaa7f114d6dbad028a60fe0f644fba4314f5",
-          "size_bytes": 35037952
+          "blake3": "78100fb3671ba3cfa1265af7e9300956ab0f84e959fcf3bf8f12d1e80cbb8b3b",
+          "size_bytes": 35071392
         },
         "darwin-x86_64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-x86_64-apple-darwin",
@@ -23,8 +23,8 @@
         "linux-x86_64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.3/rove-x86_64-unknown-linux-gnu",
           "fallback_url": "https://raw.githubusercontent.com/rovehq/registry/main/dev/engine/0.0.3/rove-x86_64-unknown-linux-gnu",
-          "blake3": "83de55ef7f165b9aa74436debd1944dd878bccb6a504516a8ba9f6f2c199d40a",
-          "size_bytes": 51119352
+          "blake3": "416b8803548d90443f885ca2abdcd62328511e96cb713355ac7dcd5dd7bdd69b",
+          "size_bytes": 51120152
         },
         "linux-aarch64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-aarch64-unknown-linux-gnu",
@@ -35,8 +35,8 @@
         "windows-x86_64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
           "fallback_url": "https://raw.githubusercontent.com/rovehq/registry/main/dev/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
-          "blake3": "e22035c1065a639d339a9651a73efbc9b40f50e71869ec5178aa70051e7ad202",
-          "size_bytes": 45767168
+          "blake3": "77246ec3e6f3176e616a6fde4927281c303f7275a4fd72eccc85372f9061d861",
+          "size_bytes": 45737984
         }
       }
     }
