@@ -3,7 +3,7 @@
   "channel": "dev",
   "artifact": "engine",
   "issuer": "rove-team",
-  "published_at": "2026-07-15T23:12:28Z",
+  "published_at": "2026-07-16T23:20:17Z",
   "entries": {
     "latest": {
       "version": "0.0.3",
@@ -11,7 +11,7 @@
         "darwin-aarch64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.3/rove-aarch64-apple-darwin",
           "fallback_url": "https://raw.githubusercontent.com/rovehq/registry/main/dev/engine/0.0.3/rove-aarch64-apple-darwin",
-          "blake3": "65b2c867787db6b20fe2b945517322f674d7ad18eb126eae8321029efcf03f92",
+          "blake3": "4653c051374e93df634d5aed587be8fc9ea195a127e231a024d9073a05cef6a9",
           "size_bytes": 34855136
         },
         "darwin-x86_64": {
@@ -23,8 +23,8 @@
         "linux-x86_64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.3/rove-x86_64-unknown-linux-gnu",
           "fallback_url": "https://raw.githubusercontent.com/rovehq/registry/main/dev/engine/0.0.3/rove-x86_64-unknown-linux-gnu",
-          "blake3": "a1f81fbdadb6864f61657f7f2efe261d79f0fab27a394d62e7c9c897e78da78e",
-          "size_bytes": 50970328
+          "blake3": "553a3ff9fb2ee0b08a482b4803306fd79184195446d8be1fe5e02b2df9bd080d",
+          "size_bytes": 51029656
         },
         "linux-aarch64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.4-dev/rove-aarch64-unknown-linux-gnu",
@@ -35,8 +35,8 @@
         "windows-x86_64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
           "fallback_url": "https://raw.githubusercontent.com/rovehq/registry/main/dev/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
-          "blake3": "1904f55c964a82fd990b5f4309d18eca08f43f058d43d8d651304154d771dac4",
-          "size_bytes": 45587968
+          "blake3": "7c070c073005bdd152385c3a5a920adf9939a801ac52b17ee2ebef98390ab208",
+          "size_bytes": 45593600
         }
       }
     }
