@@ -3,7 +3,7 @@
   "channel": "dev",
   "artifact": "engine",
   "issuer": "rove-team",
-  "published_at": "2026-07-31T23:16:01Z",
+  "published_at": "2026-08-01T23:07:32Z",
   "entries": {
     "latest": {
       "version": "0.0.3",
@@ -35,7 +35,7 @@
         "windows-x86_64": {
           "url": "https://registry.roveai.co/dev/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
           "fallback_url": "https://raw.githubusercontent.com/rovehq/registry/main/dev/engine/0.0.3/rove-x86_64-pc-windows-msvc.exe",
-          "blake3": "0660a26ba729d481b3e1747bb0f9325c8b0ad639a7f4f7fa60edfedf493cc543",
+          "blake3": "894b62bce27cfa1f5876ba6b23268c9c08003528c2cd3aa81f18dff9d54c8f68",
           "size_bytes": 45593600
         }
       }
